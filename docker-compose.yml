@@ -40,10 +40,10 @@ services:
     # volumes:
       # - /etc/localtime:/etc/localtime:ro
     ports:
-      - "3000:3000"
+      - "6510:3000"
   addons:
     build: addons
     restart: on-failure
     container_name: addons
     ports:
-      - "80:80"
+      - "6520:80"
