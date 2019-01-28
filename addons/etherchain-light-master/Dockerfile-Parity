@@ -3,6 +3,8 @@ FROM parity/parity:stable
 RUN \
 	apt-get update && apt-get install -y curl git npm make g++ --no-install-recommends && \
   npm install -g n pm2 && n stable
+  
+RUN npm config set unsafe-perm true
 
 RUN \
   git clone --depth=1 https://github.com/puppeth/eth-net-intelligence-api && \
